@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.hidden {
+ .hidden {
   display: none !important;
 }
 .visually-hidden {
@@ -25,25 +25,3 @@
   clip: auto;
 }
 
-
-/*
-  Focus ring - none
-*/
-
-/* Dangerous for a11y - Use with care */
-/* .focus-none { */
-/*   box-shadow: none !important; */
-/*   outline: 0 !important; */
-/* } */
-
-/* .focus-offset:focus-visible { */
-/*   outline: 0.2rem solid rgba(var(--color-foreground), 0.5); */
-/*   outline-offset: 1rem; */
-/*   box-shadow: 0 0 0 1rem rgb(var(--color-background)), 0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3); */
-/* } */
-
-/* .focus-offset.focused { */
-/*   outline: 0.2rem solid rgba(var(--color-foreground), 0.5); */
-/*   outline-offset: 1rem; */
-/*   box-shadow: 0 0 0 1rem rgb(var(--color-background)), 0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3); */
-/* } */

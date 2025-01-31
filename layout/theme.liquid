@@ -30,21 +30,20 @@
     
     {{ content_for_header }}
     
-    {% comment %} {{ 'reset.css' | asset_url | stylesheet_tag }} {% endcomment %}
     {{ 'styles.css' | asset_url | stylesheet_tag }}
   </head>
   
-  <body class="">
+  <body class="flex min-h-[100vh] flex-col">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     {% render 'header' %}
-
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main id="MainContent" class="outline-none shadow-none flex-auto" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-
-    {% comment %} {% sections 'footer-group' %} {% endcomment %}
+    <div class="shrink-0">
+      {% render 'footer' %}
+    </div>
   </body>
 </html>
