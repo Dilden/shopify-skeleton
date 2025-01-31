@@ -30,8 +30,8 @@
     
     {{ content_for_header }}
     
-    {{ 'reset.css' | asset_url | stylesheet_tag }}
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {% comment %} {{ 'reset.css' | asset_url | stylesheet_tag }} {% endcomment %}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
   </head>
   
   <body class="">
@@ -39,7 +39,7 @@
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
-    {% comment %} {% sections 'header-group' %} {% endcomment %}
+    {% render 'header' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
