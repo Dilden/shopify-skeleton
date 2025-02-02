@@ -1,5 +1,39 @@
-{%- if linklists.main-menu.size > 0  -%}
-  {%- for link in linklists.main-menu.links -%}
-    <a href="{{ link.url }}">{{ link.title }}</a>
-  {% endfor %}
-{%- endif -%}
+
+  <input type="checkbox" id="menu-btn" bind:checked={isOpen} class="peer hidden" />
+  <label
+      for="menu-btn"
+      title="Menu"
+      aria-label="Menu"
+      class="content-[' '] fixed right-0 top-0 z-[100] touch-manipulation rounded-bl-lg border-none bg-slate-800 p-8 text-left text-blue-300 no-underline shadow-xl drop-shadow-lg transition-all duration-200 ease-in-out hover:rounded-bl-lg hover:bg-slate-900 peer-checked:right-64"
+      >
+      <span
+          class="content-[' '] before:content-[' '] after:content-[' '] absolute right-3 top-[50%] block w-9 bg-blue-300 p-[1px] transition-all duration-200 ease-in-out before:absolute before:right-0 before:top-2 before:block before:w-9 before:bg-blue-300 before:p-[1px] before:transition-all before:duration-200 before:ease-in-out after:absolute after:bottom-2 after:right-0 after:block after:w-9 after:bg-blue-300 after:p-[1px] after:transition-all after:duration-200 after:ease-in-out"
+          ></span>
+  </label>
+<nav
+  class="fixed right-[-16rem] top-0 z-[110] flex h-full min-w-64 flex-col justify-between bg-slate-800 transition-all duration-200 ease-in-out peer-checked:right-0 peer-checked:shadow-2xl"
+>
+  <ul class="relative z-[130] m-0 list-none bg-slate-800 p-0 text-center">
+    {%- if linklists.main-menu.size > 0  -%}
+      {%- for link in linklists.main-menu.links -%}
+				<li class="m-0 p-0">
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+      {% endfor %}
+    {%- endif -%}
+		</ul>
+</nav>
+
+<style>
+	#menu-btn:checked ~ label span {
+		background: transparent;
+		&:before {
+			top: 0;
+			rotate: 45deg;
+		}
+		&:after {
+			bottom: 0;
+			rotate: -45deg;
+		}
+	}
+</style>

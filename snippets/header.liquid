@@ -5,7 +5,7 @@
     {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
     {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
     {{ settings.logo | image_url: width: 600 | image_tag:
-      class: 'header__heading-logo motion-reduce',
+      class: 'w-auto',
       widths: widths,
       height: logo_height,
       width: settings.logo_width,
@@ -14,7 +14,7 @@
       preload: true
     }}
   {%- else -%}
-    <span class="h2">{{ shop.name }}</span>
+    <span class="h2 text-3xl">{{ shop.name }}</span>
   {%- endif -%}
   {%- render 'main-menu' -%}
 </div>
