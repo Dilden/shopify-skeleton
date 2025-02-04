@@ -8,6 +8,8 @@ const slider = {
   playBtn: document.getElementById("slider_pause"),
   dotsContainer: document.querySelectorAll(".dots"),
   dots: document.querySelectorAll(".dots > button"),
+  touchstartX: 0,
+  touchendX: 0,
   init: function (options) {
     this.slidesContainer =
       options.container ?? document.querySelector(".slide_container");
@@ -40,6 +42,23 @@ const slider = {
 
     this.dots.forEach((item, x) => {
       item.addEventListener("click", () => this.dotClick(x));
+    });
+
+    this.slidesContainer.addEventListener("touchstart", (e) => {
+      this.touchstartX = e.changedTouches[0].screenX;
+    });
+
+    this.slidesContainer.addEventListener("touchend", (e) => {
+      this.touchendX = e.changedTouches[0].screenX;
+      if (this.touchstartX > this.touchendX) {
+        // swipe right
+        this.next();
+      }
+      if (this.touchstartX < this.touchendX) {
+        // swipe left
+        this.prev();
+      }
+      this.touchstartX = this.touchendX = 0;
     });
   },
   dotClick: function (index) {
