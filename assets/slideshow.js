@@ -1,6 +1,7 @@
 const slider = {
-  slide: document.querySelector(".slider"),
   slidesContainer: document.querySelector(".slide_container"),
+  current: 1,
+  count: document.querySelectorAll(".slide").length,
   init: function () {
     this.addEvents();
   },
@@ -13,12 +14,25 @@ const slider = {
       .addEventListener("click", () => this.prev());
   },
   next: function () {
-    console.log("next");
-    this.slidesContainer.scrollLeft += this.slide.clientWidth;
+    console.log(this.current);
+    if (this.current >= this.count) {
+      this.slidesContainer.scrollLeft = 0;
+      this.current = 1;
+    } else {
+      this.slidesContainer.scrollLeft += this.slidesContainer.clientWidth;
+      this.current = this.current + 1;
+    }
   },
   prev: function () {
-    console.log("prev");
-    this.slidesContainer.scrollLeft -= this.slide.clientWidth;
+    console.log(this.current);
+    if (this.current <= 1) {
+      this.slidesContainer.scrollLeft =
+        this.slidesContainer.clientWidth * this.count;
+      this.current = this.count;
+    } else {
+      this.slidesContainer.scrollLeft -= this.slidesContainer.clientWidth;
+      this.current = this.current - 1;
+    }
   },
   pause: function () {
     console.log("pause");
