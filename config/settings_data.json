@@ -19,11 +19,11 @@
             "type": "slide",
             "settings": {
               "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
-              "heading": "",
+              "heading": "Epic Ocean Views!",
               "heading_size": "h1",
               "subheading": "",
               "button_label": "",
-              "link": "",
+              "link": "shopify://pages/about",
               "button_style_secondary": false,
               "box_align": "middle-center",
               "show_text_box": true,
@@ -37,10 +37,28 @@
             "type": "slide",
             "settings": {
               "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-              "heading": "",
+              "heading": "Sunsets & Mountains",
               "heading_size": "h1",
               "subheading": "",
               "button_label": "",
+              "link": "",
+              "button_style_secondary": false,
+              "box_align": "middle-center",
+              "show_text_box": true,
+              "text_alignment": "center",
+              "image_overlay_opacity": 0,
+              "color_scheme": "scheme-1",
+              "text_alignment_mobile": "center"
+            }
+          },
+          "slide_zfeeTC": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
+              "heading": "Fantastic Drinks",
+              "heading_size": "h1",
+              "subheading": "",
+              "button_label": "Button label",
               "link": "",
               "button_style_secondary": false,
               "box_align": "middle-center",
@@ -54,17 +72,13 @@
         },
         "block_order": [
           "slide_w3xRqr",
-          "slide_MXHNNV"
+          "slide_MXHNNV",
+          "slide_zfeeTC"
         ],
         "settings": {
-          "layout": "full_bleed",
-          "slide_height": "medium",
-          "slider_visual": "counter",
-          "auto_rotate": false,
-          "change_slides_speed": 5,
-          "image_behavior": "none",
-          "show_text_below": true,
-          "accessibility_info": "Slideshow about our brand"
+          "autoplay": false,
+          "show_dots": true,
+          "show_arrows": false
         }
       }
     },
