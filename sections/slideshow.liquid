@@ -1,28 +1,26 @@
-
 <script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
-
-{% comment %} 
-move slider code here with javascript tags to adjust based on section settings 
-{% endcomment %}
-
-{% assign slides = 'slide1.jpeg, slide2.jpeg, slide3.jpeg' | split: ', ' %}
 
 <div class="slider overflow-hidden w-full h-96 relative text-center">
   <div class="slide_container flex flex-nowrap overflow-scroll scroll-smooth flex-row transition-all">
     
-    {%- assign count = 1 -%}
-    {%- for slide in slides -%} 
-      <img src={{ slide | prepend: 'assets/' }} class="w-auto slide shrink-0 object-bottom"/> 
-        {% assign count = count | plus:1 %}
+    {%- for block in section.blocks -%}
+      {%- if block.settings.image -%}
+        {{
+          block.settings.image
+          | image_url: width: 3840
+          | image_tag: loading: 'lazy', class: "w-auto slide shrink-0 object-bottom"
+        }}
+      {% endif %}
     {%- endfor -%}
   </div>
-    {%- assign count = 1 -%}
+
+  {%- if section.settings.show_dots -%}
     <div class="dots absolute my-2 top-0 w-full gap-4 flex flex-row justify-center items-center">
-    {%- for slide in slides -%} 
-      <button class="{% if count == 1 %} bg-blue-200 {% endif %} rounded-full w-3 h-3 block border-blue-200 border-solid border-2"></button>
-      {% assign count = count | plus:1 %}
+    {%- for block in section.blocks -%}
+        <button class="{%- if forloop.first -%} bg-blue-200 {% endif %} rounded-full w-3 h-3 block border-blue-200 border-solid border-2"></button>
     {%- endfor -%}
     </div>
+  {%- endif -%}
 
     <div class="controls bottom-0 mx-auto absolute flex items-center text-blue-200 flex-row justify-between w-full gap-4 mb-2">
 
