@@ -1,6 +1,10 @@
 
 <script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
 
+{% comment %} 
+move slider code here with javascript tags to adjust based on section settings 
+{% endcomment %}
+
 {% assign slides = 'slide1.jpeg, slide2.jpeg, slide3.jpeg' | split: ', ' %}
 
 <div class="slider overflow-hidden w-full h-96 relative text-center">
@@ -8,20 +12,28 @@
     
     {%- assign count = 1 -%}
     {%- for slide in slides -%} 
-        <img src={{ slide | prepend: 'assets/' }} class="w-auto slide shrink-0 object-center" data-position={{count}}/>
+      <img src={{ slide | prepend: 'assets/' }} class="w-auto slide shrink-0 object-bottom"/> 
         {% assign count = count | plus:1 %}
     {%- endfor -%}
   </div>
+    {%- assign count = 1 -%}
+    <div class="dots absolute my-2 top-0 w-full gap-4 flex flex-row justify-center items-center">
+    {%- for slide in slides -%} 
+      <button class="{% if count == 1 %} bg-blue-200 {% endif %} rounded-full w-3 h-3 block border-blue-200 border-solid border-2"></button>
+      {% assign count = count | plus:1 %}
+    {%- endfor -%}
+    </div>
 
-    <div class="bottom-0 mx-auto absolute flex text-blue-200 flex-row justify-between w-full gap-4 mb-2">
-      <button id="slider_prev" class="w-6 rotate-90">
+    <div class="controls bottom-0 mx-auto absolute flex items-center text-blue-200 flex-row justify-between w-full gap-4 mb-2">
+
+      <button id="slider_prev" class="w-10 p-2 rotate-90 hover:text-blue-400 transition-colors">
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </button>
-      <button id="slider_pause" class="w-6">
-        {% comment %} {{- 'icon-play.svg' | inline_asset_content -}} {% endcomment %}
+      <button id="slider_pause" class="w-10 pause p-2 hover:text-blue-400 transition-colors">
+        {{- 'icon-play.svg' | inline_asset_content -}}
         {{- 'icon-pause.svg' | inline_asset_content -}}
       </button>
-      <button id="slider_next" class="w-6 rotate-[-90deg]">
+      <button id="slider_next" class="w-10 p-2 rotate-[-90deg] hover:text-blue-400 transition-colors">
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </button>
     </div>

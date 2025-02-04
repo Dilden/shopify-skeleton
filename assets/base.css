@@ -25,3 +25,20 @@
   height: auto;
   clip: auto;
 }
+
+#slider_pause.play .icon-play {
+  visibility: visible;
+  display: inline-block;
+}
+#slider_pause.play .icon-pause {
+  visibility: hidden;
+  display: none;
+}
+#slider_pause.pause .icon-play {
+  visibility: hidden;
+  display: none;
+}
+#slider_pause.pause .icon-pause {
+  visibility: visible;
+  display: inline-block;
+}
