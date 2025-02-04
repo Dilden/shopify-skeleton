@@ -1,5 +1,4 @@
-
-  <input type="checkbox" id="menu-btn" bind:checked={isOpen} class="peer hidden" />
+  <input type="checkbox" id="menu-btn" class="peer hidden" />
   <label
       for="menu-btn"
       title="Menu"
@@ -13,11 +12,11 @@
 <nav
   class="fixed right-[-16rem] top-0 z-[110] flex h-full min-w-64 flex-col justify-between bg-slate-800 transition-all duration-200 ease-in-out peer-checked:right-0 peer-checked:shadow-2xl"
 >
-  <ul class="relative z-[130] m-0 list-none bg-slate-800 p-0 text-center">
+  <ul class="relative z-[130] m-0 flex flex-col gap-2 list-none bg-slate-800 p-0 text-center">
     {%- if linklists.main-menu.size > 0  -%}
       {%- for link in linklists.main-menu.links -%}
-				<li class="m-0 p-0">
-          <a href="{{ link.url }}">{{ link.title }}</a>
+				<li>
+          <a href="{{ link.url }}" class=" my-1 mx-0 p-3 block hover:bg-gray-700 transition-colors delay-150">{{ link.title }}</a>
         </li>
       {% endfor %}
     {%- endif -%}

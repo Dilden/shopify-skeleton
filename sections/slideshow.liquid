@@ -1,0 +1,21 @@
+
+<script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
+
+{% assign slides = 'slide1.jpeg, slide2.jpeg, slide3.jpeg' | split: ', ' %}
+
+<div class="slider overflow-hidden w-96 h-96 relative text-center">
+  <div class="slide_container flex flex-nowrap overflow-scroll scroll-smooth flex-row transition-all">
+    
+    {%- assign count = 1 -%}
+    {%- for slide in slides -%} 
+        <img src={{ slide | prepend: 'assets/' }} class="w-auto slide shrink-0 object-contain" data-position={{count}}/>
+        {% assign count = count | plus:1 %}
+    {%- endfor -%}
+  </div>
+
+    <div class="bottom-0 mx-auto absolute flex text-black flex-row justify-center w-full gap-4">
+      <button id="slider_prev">Prev</button>
+      {% comment %} <button id="slider__pause">Pause</button> {% endcomment %}
+      <button id="slider_next">Next</button>
+    </div>
+</div>

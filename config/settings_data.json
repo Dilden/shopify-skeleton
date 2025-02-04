@@ -1,3 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "current": {}
+  "current": {
+    "logo": "shopify://shop_images/fira-mono-logo.svg",
+    "favicon": "shopify://shop_images/closingtags-black-32x32.png",
+    "sections": {
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slide_w3xRqr": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+              "heading": "",
+              "heading_size": "h1",
+              "subheading": "",
+              "button_label": "",
+              "link": "",
+              "button_style_secondary": false,
+              "box_align": "middle-center",
+              "show_text_box": true,
+              "text_alignment": "center",
+              "image_overlay_opacity": 0,
+              "color_scheme": "scheme-1",
+              "text_alignment_mobile": "center"
+            }
+          },
+          "slide_MXHNNV": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+              "heading": "",
+              "heading_size": "h1",
+              "subheading": "",
+              "button_label": "",
+              "link": "",
+              "button_style_secondary": false,
+              "box_align": "middle-center",
+              "show_text_box": true,
+              "text_alignment": "center",
+              "image_overlay_opacity": 0,
+              "color_scheme": "scheme-1",
+              "text_alignment_mobile": "center"
+            }
+          }
+        },
+        "block_order": [
+          "slide_w3xRqr",
+          "slide_MXHNNV"
+        ],
+        "settings": {
+          "layout": "full_bleed",
+          "slide_height": "medium",
+          "slider_visual": "counter",
+          "auto_rotate": false,
+          "change_slides_speed": 5,
+          "image_behavior": "none",
+          "show_text_below": true,
+          "accessibility_info": "Slideshow about our brand"
+        }
+      }
+    },
+    "content_for_index": []
+  }
 }

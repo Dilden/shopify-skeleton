@@ -1,3 +1,5 @@
+
+{%- render 'main-menu' -%}
 <div class="flex sm:flex-col items-center md:flex-row md:justify-around">
   {%- if settings.logo != blank -%}
     {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
@@ -5,7 +7,7 @@
     {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
     {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
     {{ settings.logo | image_url: width: 600 | image_tag:
-      class: 'w-auto',
+      class: 'w-auto max-w-sm',
       widths: widths,
       height: logo_height,
       width: settings.logo_width,
@@ -16,5 +18,4 @@
   {%- else -%}
     <span class="h2 text-3xl">{{ shop.name }}</span>
   {%- endif -%}
-  {%- render 'main-menu' -%}
 </div>
