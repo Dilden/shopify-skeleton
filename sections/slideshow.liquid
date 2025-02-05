@@ -2,12 +2,15 @@
   <div class="slide_container flex flex-nowrap overflow-scroll scroll-smooth flex-row transition-all">
     
     {%- for block in section.blocks -%}
-      <div class="slide w-auto shrink-0">
+      <div class="slide w-auto relative shrink-0">
       {%- if block.settings.image -%}
+        {%- liquid 
+          assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+        -%}
         {{
           block.settings.image
           | image_url: width: 1940
-          | image_tag: loading: 'lazy', class: ""
+          | image_tag: loading: 'lazy', height: height, class: ""
         }}
       {% endif %}
 
@@ -21,8 +24,8 @@
         <div class="col-span-1 row-span-1"></div>
         <div class="col-span-1 row-span-1"></div>
         {%- if block.settings.heading -%}
-          <h2 class="bg-gray-200 text-slate-900 z-10 p-5 block text-3xl 
-           {%-liquid 
+          <h2 class="bg-gray-200 text-slate-900 p-5 block text-3xl 
+          {%- liquid
             assign box_align = ""
              case block.settings.box_align
               when 'top-left'
