@@ -1,4 +1,4 @@
-<div class="slider overflow-hidden w-full h-96 relative text-center">
+<div class="slider overflow-hidden w-full relative text-center">
   <div class="slide_container flex flex-nowrap overflow-scroll scroll-smooth flex-row transition-all">
     
     {%- for block in section.blocks -%}
@@ -6,9 +6,42 @@
         {{
           block.settings.image
           | image_url: width: 3840
-          | image_tag: loading: 'lazy', class: "w-auto slide shrink-0 object-bottom"
+          | image_tag: loading: 'lazy', class: "w-auto slide shrink-0 object-cover"
         }}
       {% endif %}
+
+      <div class="grid grid-cols-3 grid-rows-3">
+        {%- if block.settings.header -%}
+          <h2 class="bg-gray-200 text-slate-700
+           {%-liquid 
+            assign box_align = ""
+             case block.settings.box_align
+              when 'top-left'
+                assign box_align = "col-start-1 col-end-2 row-start-1 row-end-2"
+              when 'top-center' 
+                assign box_align = "col-start-2 col-end-3 row-start-1 row-end-2"
+              when 'top-right' 
+                assign box_align = "col-start-3 col-end-4 row-start-1 row-end-2"
+               when 'center-left' 
+                assign box_align = "col-start-1 col-end-2 row-start-2 row-end-3"
+               when 'center-center' 
+                assign box_align = "col-start-2 col-end-3 row-start-2 row-end-3"
+               when 'center-right' 
+                assign box_align = "col-start-3 col-end-4 row-start-2 row-end-3"
+               when 'bottom-left' 
+                assign box_align = "col-start-1 col-end-2 row-start-3 row-end-4"
+               when 'bottom-center' 
+                assign box_align = "col-start-2 col-end-3 row-start-3 row-end-4"
+               when 'bottom-right' 
+                assign box_align = "col-start-3 col-end-4 row-start-3 row-end-4"
+               else 
+
+             endcase 
+        -%}
+        {{box_align}}">{{block.settings.header}}</h2>
+        {%- endif -%}
+        
+      </div>
     {%- endfor -%}
   </div>
 
@@ -230,40 +263,6 @@
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "hxxl",
-              "label": "t:sections.all.heading_size.options__5.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        },
-        {
-          "type": "inline_richtext",
-          "id": "subheading",
-          "default": "t:sections.slideshow.blocks.slide.settings.subheading.default",
-          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
-        },
-        {
           "type": "text",
           "id": "button_label",
           "default": "t:sections.slideshow.blocks.slide.settings.button_label.default",
@@ -353,45 +352,11 @@
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
         },
         {
-          "type": "range",
-          "id": "image_overlay_opacity",
-          "min": 0,
-          "max": 100,
-          "step": 10,
-          "unit": "%",
-          "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
-          "default": 0
-        },
-        {
           "type": "color_scheme",
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
           "default": "scheme-1"
         },
-        {
-          "type": "header",
-          "content": "t:sections.slideshow.settings.mobile.content"
-        },
-        {
-          "type": "select",
-          "id": "text_alignment_mobile",
-          "options": [
-            {
-              "value": "left",
-              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__1.label"
-            },
-            {
-              "value": "center",
-              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__2.label"
-            },
-            {
-              "value": "right",
-              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__3.label"
-            }
-          ],
-          "default": "center",
-          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
-        }
       ]
     }
   ],

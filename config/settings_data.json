@@ -18,7 +18,7 @@
           "slide_w3xRqr": {
             "type": "slide",
             "settings": {
-              "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+              "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
               "heading": "Epic Ocean Views!",
               "heading_size": "h1",
               "subheading": "",
@@ -36,7 +36,7 @@
           "slide_MXHNNV": {
             "type": "slide",
             "settings": {
-              "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+              "image": "shopify://shop_images/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
               "heading": "Sunsets & Mountains",
               "heading_size": "h1",
               "subheading": "",
@@ -79,8 +79,8 @@
           "autoplay": true,
           "show_play": false,
           "show_dots": true,
-          "delay": "4000",
-          "show_arrows": false
+          "show_arrows": false,
+          "delay": "5000"
         }
       }
     },
