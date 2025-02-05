@@ -2,45 +2,55 @@
   <div class="slide_container flex flex-nowrap overflow-scroll scroll-smooth flex-row transition-all">
     
     {%- for block in section.blocks -%}
+      <div class="slide w-auto shrink-0">
       {%- if block.settings.image -%}
         {{
           block.settings.image
-          | image_url: width: 3840
-          | image_tag: loading: 'lazy', class: "w-auto slide shrink-0 object-cover"
+          | image_url: width: 1940
+          | image_tag: loading: 'lazy', class: ""
         }}
       {% endif %}
 
-      <div class="grid grid-cols-3 grid-rows-3 top-0 bottom-0 right-0 left-0 z-10 w-auto h-auto">
+      <div class="grid grid-cols-3 grid-rows-3 absolute left-0 top-0 w-full h-full">
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1"></div>
         {%- if block.settings.heading -%}
-          <h2 class="bg-gray-200 text-slate-700
+          <h2 class="bg-gray-200 text-slate-900 z-10 p-5 block text-3xl 
            {%-liquid 
             assign box_align = ""
              case block.settings.box_align
               when 'top-left'
-                assign box_align = "col-start-1 col-end-2 row-start-1 row-end-2"
+                assign box_align = " col-start-1 col-end-2 row-start-1 row-end-2"
               when 'top-center' 
-                assign box_align = "col-start-2 col-end-3 row-start-1 row-end-2"
+                assign box_align = " col-start-2 col-end-3 row-start-1 row-end-2"
               when 'top-right' 
-                assign box_align = "col-start-3 col-end-4 row-start-1 row-end-2"
+                assign box_align = " col-start-3 col-end-4 row-start-1 row-end-2"
                when 'center-left' 
-                assign box_align = "col-start-1 col-end-2 row-start-2 row-end-3"
-               when 'center-center' 
-                assign box_align = "col-start-2 col-end-3 row-start-2 row-end-3"
+                assign box_align = " col-start-1 col-end-2 row-start-2 row-end-3"
+               when 'center-center'  
+                assign box_align = " col-start-2 col-end-3 row-start-2 row-end-3"
                when 'center-right' 
-                assign box_align = "col-start-3 col-end-4 row-start-2 row-end-3"
+                assign box_align = " col-start-3 col-end-4 row-start-2 row-end-3"
                when 'bottom-left' 
-                assign box_align = "col-start-1 col-end-2 row-start-3 row-end-4"
-               when 'bottom-center' 
-                assign box_align = "col-start-2 col-end-3 row-start-3 row-end-4"
+                assign box_align = " col-start-1 col-end-2 row-start-3 row-end-4"
+               when 'bottom-center'  
+                assign box_align = " col-start-2 col-end-3 row-start-3 row-end-4"
                when 'bottom-right' 
-                assign box_align = "col-start-3 col-end-4 row-start-3 row-end-4"
+                assign box_align = " col-start-3 col-end-4 row-start-3 row-end-4"
                else 
 
              endcase 
-        -%}
-        {{box_align}}">{{block.settings.heading}}</h2>
+          -%}
+           {{box_align}}">{{block.settings.heading}}</h2>
         {%- endif -%}
         
+      </div>
       </div>
     {%- endfor -%}
   </div>

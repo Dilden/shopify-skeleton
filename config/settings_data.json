@@ -15,40 +15,32 @@
       "slideshow": {
         "type": "slideshow",
         "blocks": {
+          "slide_MXHNNV": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+              "heading": "Epic Oceans Views!",
+              "button_label": "Go to a page!",
+              "link": "shopify://pages/about",
+              "button_style_secondary": false,
+              "box_align": "top-right",
+              "show_text_box": true,
+              "text_alignment": "center",
+              "color_scheme": "scheme-1"
+            }
+          },
           "slide_w3xRqr": {
             "type": "slide",
             "settings": {
               "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-              "heading": "Epic Ocean Views!",
-              "heading_size": "h1",
-              "subheading": "",
-              "button_label": "",
+              "heading": "Mountains & Fishing!",
+              "button_label": "Contact Us",
               "link": "shopify://pages/about",
-              "button_style_secondary": false,
-              "box_align": "middle-center",
+              "button_style_secondary": true,
+              "box_align": "top-left",
               "show_text_box": true,
               "text_alignment": "center",
-              "image_overlay_opacity": 0,
-              "color_scheme": "scheme-1",
-              "text_alignment_mobile": "center"
-            }
-          },
-          "slide_MXHNNV": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify://shop_images/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
-              "heading": "Sunsets & Mountains",
-              "heading_size": "h1",
-              "subheading": "",
-              "button_label": "",
-              "link": "",
-              "button_style_secondary": false,
-              "box_align": "middle-center",
-              "show_text_box": true,
-              "text_alignment": "center",
-              "image_overlay_opacity": 0,
-              "color_scheme": "scheme-1",
-              "text_alignment_mobile": "center"
+              "color_scheme": "scheme-1"
             }
           },
           "slide_zfeeTC": {
@@ -56,27 +48,23 @@
             "settings": {
               "image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
               "heading": "Fantastic Drinks",
-              "heading_size": "h1",
-              "subheading": "",
-              "button_label": "Button label",
-              "link": "",
+              "button_label": "Buy Now",
+              "link": "shopify://blogs/news",
               "button_style_secondary": false,
-              "box_align": "middle-center",
+              "box_align": "middle-right",
               "show_text_box": true,
               "text_alignment": "center",
-              "image_overlay_opacity": 0,
-              "color_scheme": "scheme-1",
-              "text_alignment_mobile": "center"
+              "color_scheme": "scheme-1"
             }
           }
         },
         "block_order": [
-          "slide_w3xRqr",
           "slide_MXHNNV",
+          "slide_w3xRqr",
           "slide_zfeeTC"
         ],
         "settings": {
-          "autoplay": true,
+          "autoplay": false,
           "show_play": false,
           "show_dots": true,
           "show_arrows": false,
