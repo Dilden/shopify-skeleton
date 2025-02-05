@@ -24,16 +24,22 @@
 
     <div class="controls bottom-0 mx-auto absolute flex items-center text-blue-200 flex-row justify-between w-full gap-4 mb-2">
 
-      <button id="slider_prev" class="w-10 p-2 rotate-90 hover:text-blue-400 transition-colors">
-        {{- 'icon-caret.svg' | inline_asset_content -}}
-      </button>
-      <button id="slider_pause" class="w-10 pause p-2 hover:text-blue-400 transition-colors">
-        {{- 'icon-play.svg' | inline_asset_content -}}
-        {{- 'icon-pause.svg' | inline_asset_content -}}
-      </button>
-      <button id="slider_next" class="w-10 p-2 rotate-[-90deg] hover:text-blue-400 transition-colors">
-        {{- 'icon-caret.svg' | inline_asset_content -}}
-      </button>
+      {%- if section.settings.show_arrows -%}
+        <button id="slider_prev" class="w-10 p-2 rotate-90 hover:text-blue-400 transition-colors">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </button>
+      {%- endif -%}
+      {%- if section.settings.show_play -%}
+        <button id="slider_pause" class="w-10 {% if section.settings.autoplay %} pause {%else %} play {% endif %} p-2 hover:text-blue-400 transition-colors">
+          {{- 'icon-play.svg' | inline_asset_content -}}
+          {{- 'icon-pause.svg' | inline_asset_content -}}
+        </button>
+      {%- endif -%}
+      {%- if section.settings.show_arrows -%}
+        <button id="slider_next" class="w-10 p-2 rotate-[-90deg] hover:text-blue-400 transition-colors">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </button>
+      {%- endif -%}
     </div>
 </div>
 
@@ -50,6 +56,12 @@
       "type": "checkbox",
       "id": "autoplay",
       "label": "Autoplay slideshow",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_play",
+      "label": "Show play/pause button",
       "default": true
     },
     {
