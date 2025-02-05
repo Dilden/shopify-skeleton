@@ -628,6 +628,10 @@ video {
   top: 50%;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .z-\[100\] {
   z-index: 100;
 }
@@ -638,6 +642,10 @@ video {
 
 .z-\[130\] {
   z-index: 130;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .col-start-1 {
@@ -742,6 +750,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .min-h-\[100vh\] {

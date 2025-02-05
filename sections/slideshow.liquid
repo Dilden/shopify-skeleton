@@ -10,8 +10,8 @@
         }}
       {% endif %}
 
-      <div class="grid grid-cols-3 grid-rows-3">
-        {%- if block.settings.header -%}
+      <div class="grid grid-cols-3 grid-rows-3 top-0 bottom-0 right-0 left-0 z-10 w-auto h-auto">
+        {%- if block.settings.heading -%}
           <h2 class="bg-gray-200 text-slate-700
            {%-liquid 
             assign box_align = ""
@@ -38,7 +38,7 @@
 
              endcase 
         -%}
-        {{box_align}}">{{block.settings.header}}</h2>
+        {{box_align}}">{{block.settings.heading}}</h2>
         {%- endif -%}
         
       </div>
@@ -202,7 +202,10 @@
     },
   };
 
-  slider.init({timer: {{ section.settings.delay}}});
+  slider.init({
+    timer: {{ section.settings.delay}},
+    autoplay: {{section.settings.autoplay}}
+  });
 </script>
 
 {% schema %}
