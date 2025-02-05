@@ -30,7 +30,7 @@
         </button>
       {%- endif -%}
       {%- if section.settings.show_play -%}
-        <button id="slider_pause" class="w-10 {% if section.settings.autoplay %} pause {%else %} play {% endif %} p-2 hover:text-blue-400 transition-colors">
+      <button id="slider_pause" class="w-10 {% if section.settings.autoplay and section.settings.show_play%} pause {% elsif section.settings.show_play %} play {% else %} {% endif %} p-2 hover:text-blue-400 transition-colors">
           {{- 'icon-play.svg' | inline_asset_content -}}
           {{- 'icon-pause.svg' | inline_asset_content -}}
         </button>
