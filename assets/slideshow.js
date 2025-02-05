@@ -23,26 +23,34 @@ const slider = {
     if (this.autoplay) {
       this.play();
     }
-    console.log(this.dots);
   },
   addEvents: function () {
-    document
-      .querySelector("#slider_next")
-      .addEventListener("click", () => this.next());
-    document
-      .querySelector("#slider_prev")
-      .addEventListener("click", () => this.prev());
-    document.querySelector("#slider_pause").addEventListener("click", () => {
-      if (!this.interval) {
-        this.play();
-      } else {
-        this.pause();
-      }
-    });
+    const next = document.querySelector("#slider_next");
+    if (next) {
+      next.addEventListener("click", () => this.next());
+    }
 
-    this.dots.forEach((item, x) => {
-      item.addEventListener("click", () => this.dotClick(x));
-    });
+    const prev = document.querySelector("#slider_prev");
+    if (prev) {
+      prev.addEventListener("click", () => this.prev());
+    }
+
+    const pause = document.querySelector("#slider_pause");
+    if (pause) {
+      pause.addEventListener("click", () => {
+        if (!this.interval) {
+          this.play();
+        } else {
+          this.pause();
+        }
+      });
+    }
+
+    if (this.dots) {
+      this.dots.forEach((item, x) => {
+        item.addEventListener("click", () => this.dotClick(x));
+      });
+    }
 
     this.slidesContainer.addEventListener("touchstart", (e) => {
       this.touchstartX = e.changedTouches[0].screenX;
