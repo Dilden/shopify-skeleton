@@ -1,12 +1,14 @@
-{{
+<div class="w-full mx-auto text-center">
+  {{
   section.settings.video
   | video_tag:
-    image_size: '1100x',
     autoplay: section.settings.autoplay,
     loop: section.settings.loop,
     controls: section.settings.controls,
-    muted: section.settings.mute
+    muted: section.settings.mute,
+    class: "w-full mx-auto"
 }}
+</div>
 
 {%- schema -%}
 {

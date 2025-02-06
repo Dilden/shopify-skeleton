@@ -109,7 +109,19 @@
           "detail_mEtLnT",
           "detail_gnRiYV"
         ],
-        "settings": {}
+        "settings": {
+          "toggle": true
+        }
+      },
+      "video": {
+        "type": "video",
+        "settings": {
+          "video": "shopify://files/videos/TeamLemmings.mp4",
+          "loop": true,
+          "controls": false,
+          "mute": true,
+          "autoplay": true
+        }
       }
     },
     "content_for_index": [],
