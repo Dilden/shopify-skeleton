@@ -1,0 +1,38 @@
+
+{%- for block in section.blocks -%}
+  <details>
+    <summary>{{block.settings.title}}</summary>
+    {{block.settings.summary}}
+  </details>
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": "Details",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "detail",
+      "name": "Detail",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Detail Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "summary",
+          "label": "Summary Text"
+        }
+      ]
+    }
+  ],
+}
+{% endschema %}
