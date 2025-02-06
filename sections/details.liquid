@@ -1,7 +1,7 @@
 
 {%- for block in section.blocks -%}
-  <details>
-    <summary>{{block.settings.title}}</summary>
+  <details class="bg-yellow-400 text-slate-800 my-4 py-4 px-8">
+    <summary class="text-3xl list-none">{{block.settings.title}}</summary>
     {{block.settings.summary}}
   </details>
 {%- endfor -%}
@@ -15,6 +15,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "toggle",
+      "label": "Toggle open details",
+      "default": true
+    },
   ],
   "blocks": [
     {
@@ -36,3 +42,24 @@
   ],
 }
 {% endschema %}
+<script>
+  if({{section.settings.toggle}}) {
+    if (document.querySelector('details')) {
+      // Fetch all the details elements
+      const details = document.querySelectorAll('details');
+
+      // Add onclick listeners
+      details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", () => {
+          // Close all details that are not targetDetail
+          details.forEach((detail) => {
+            if (detail !== targetDetail) {
+              detail.removeAttribute("open");
+            }
+          });
+        });
+      });
+    }
+  }
+
+</script>

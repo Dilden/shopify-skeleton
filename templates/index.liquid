@@ -1,6 +1,10 @@
 <div class="text-slate-400">
-  <div>{{ content_for_index }}</div>
   <div>{%- section 'slideshow' -%}</div>
-  <div>{%- section 'details' -%}</div>
+  <div class="my-8 mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[60%]">
+    {{ content_for_index }}
+  </div>
+  <div class="my-8 mx-auto max-w-[90%] md:max-w-[80%] lg:max-w-[60%]">
+    {%- section 'details' -%}
+  </div>
 </div>
 

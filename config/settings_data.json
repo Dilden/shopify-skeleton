@@ -70,6 +70,46 @@
           "show_arrows": false,
           "delay": "5000"
         }
+      },
+      "details": {
+        "type": "details",
+        "blocks": {
+          "detail_zLkkk6": {
+            "type": "detail",
+            "settings": {
+              "title": "Caffiene",
+              "summary": "Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti.        <a href=\"/blogs/news/yet-another-post\" title=\"Yet Another Post\">Non provident et dolorem</a> ut voluptas odio placeat. Nihil sed et beatae id neque sit. Ut doloribus voluptatem libero rerum ducimus.        Consectetur et rem sunt quos ducimus a qui asperiores. Minima ipsa fugit voluptatum expedita dolore fuga labore. Rerum corporis velit id beatae exercitationem cum. Nulla sint cumque illum voluptatibus. Cum consectetur ea recusandae deserunt voluptate labore qui ipsum."
+            }
+          },
+          "detail_AgVTrN": {
+            "type": "detail",
+            "settings": {
+              "title": "Taurine",
+              "summary": "Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti."
+            }
+          },
+          "detail_mEtLnT": {
+            "type": "detail",
+            "settings": {
+              "title": "Gaurine",
+              "summary": "Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti.        Non provident et dolorem ut voluptas odio placeat. Nihil sed et beatae id neque sit. Ut doloribus voluptatem libero rerum ducimus.        Consectetur et rem sunt quos ducimus a qui asperiores. Minima ipsa fugit voluptatum expedita dolore fuga labore. Rerum corporis velit id beatae exercitationem cum. Nulla sint cumque illum voluptatibus. Cum consectetur ea recusandae deserunt voluptate labore qui ipsum.Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti.        Non provident et dolorem ut voluptas odio placeat. Nihil sed et beatae id neque sit. Ut doloribus voluptatem libero rerum ducimus.        Consectetur et rem sunt quos ducimus a qui asperiores. Minima ipsa fugit voluptatum expedita dolore fuga labore. Rerum corporis velit id beatae exercitationem cum. Nulla sint cumque illum voluptatibus. Cum consectetur ea recusandae deserunt voluptate labore qui ipsum.Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti.        Non provident et dolorem ut voluptas odio placeat. Nihil sed et beatae id neque sit. Ut doloribus voluptatem libero rerum ducimus.        Consectetur et rem sunt quos ducimus a qui asperiores. Minima ipsa fugit voluptatum expedita dolore fuga labore. Rerum corporis velit id beatae exercitationem cum. Nulla sint cumque illum voluptatibus. Cum consectetur ea recusandae deserunt voluptate labore qui ipsum."
+            }
+          },
+          "detail_gnRiYV": {
+            "type": "detail",
+            "settings": {
+              "title": "Hemp Extract",
+              "summary": "Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti.        Non provident et dolorem ut voluptas odio placeat. Nihil sed et beatae id neque sit. Ut doloribus voluptatem libero rerum ducimus.        Consectetur et rem sunt quos ducimus a qui asperiores. Minima ipsa fugit voluptatum expedita dolore fuga labore. Rerum corporis velit id beatae exercitationem cum. Nulla sint cumque illum voluptatibus. Cum consectetur ea recusandae deserunt voluptate labore qui ipsum.Reprehenderit quod reiciendis vel quia non. Vitae esse earum ducimus quas voluptatem est. Quis asperiores doloremque rerum deleniti.        Non provident et dolorem ut voluptas odio placeat. Nihil sed et beatae id neque sit. Ut doloribus voluptatem libero rerum ducimus.        Consectetur et rem sunt quos ducimus a qui asperiores. Minima ipsa fugit voluptatum expedita dolore fuga labore. Rerum corporis velit id beatae exercitationem cum. Nulla sint cumque illum voluptatibus. Cum consectetur ea recusandae deserunt voluptate labore qui ipsum."
+            }
+          }
+        },
+        "block_order": [
+          "detail_zLkkk6",
+          "detail_AgVTrN",
+          "detail_mEtLnT",
+          "detail_gnRiYV"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
