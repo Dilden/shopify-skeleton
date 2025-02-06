@@ -18,9 +18,9 @@
           "slide_MXHNNV": {
             "type": "slide",
             "settings": {
-              "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
-              "heading": "Epic Oceans Views!",
-              "button_label": "Go to a page!",
+              "image": "shopify://shop_images/laptop-grayscale.jpg",
+              "heading": "Designed for Performance",
+              "button_label": "Buy now",
               "link": "shopify://pages/about",
               "button_style_secondary": false,
               "box_align": "top-right",
@@ -32,8 +32,8 @@
           "slide_w3xRqr": {
             "type": "slide",
             "settings": {
-              "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-              "heading": "Mountains & Fishing!",
+              "image": "shopify://shop_images/IMG_20200507_213013.jpg",
+              "heading": "Productivity Machines",
               "button_label": "Contact Us",
               "link": "shopify://pages/about",
               "button_style_secondary": true,
@@ -46,8 +46,8 @@
           "slide_zfeeTC": {
             "type": "slide",
             "settings": {
-              "image": "shopify://shop_images/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg",
-              "heading": "Fantastic Drinks",
+              "image": "shopify://shop_images/IMG_20200507_212945_Bokeh.jpg",
+              "heading": "On The Go",
               "button_label": "Buy Now",
               "link": "shopify://blogs/news",
               "button_style_secondary": false,
@@ -66,9 +66,9 @@
         "settings": {
           "autoplay": false,
           "show_play": false,
-          "show_dots": true,
-          "show_arrows": false,
-          "delay": "5000"
+          "show_dots": false,
+          "show_arrows": true,
+          "delay": "3500"
         }
       },
       "details": {

@@ -1,5 +1,5 @@
 <div class="slider overflow-hidden w-full relative text-center">
-  <div class="slide_container flex flex-nowrap overflow-x-scroll overflow-y-hidden max-h-96 scroll-smooth flex-row transition-all">
+  <div class="slide_container flex flex-nowrap overflow-x-scroll overflow-y-hidden h-auto max-h-[49vh] scroll-smooth flex-row transition-all">
     
     {%- for block in section.blocks -%}
       <div class="slide w-auto relative shrink-0">
@@ -23,8 +23,8 @@
         <div class="col-span-1 row-span-1"></div>
         <div class="col-span-1 row-span-1"></div>
         <div class="col-span-1 row-span-1"></div>
+        <div class="col-span-1 row-span-1
         {%- if block.settings.heading -%}
-          <h2 class="bg-gray-200 text-slate-900 m-5 block text-3xl 
           {%- liquid
             assign box_align = ""
              case block.settings.box_align
@@ -50,11 +50,17 @@
 
              endcase 
           -%}
-           {{box_align}}">{{block.settings.heading}}</h2>
+          {{box_align}} m-2">
+          <div>
+            <h2 class="bg-gray-200 text-slate-900 text-3xl p-4 inline-block w-auto mx-auto">{{block.settings.heading}}</h2>
+          </div>
         {%- endif -%}
         {%- if block.settings.button_label != blank and block.settings.link != blank -%}
-          <a href="{{block.settings.link}}" class="border-solid border-blue-500 border-2 rounded-lg {{box_align}}">{{block.settings.button_label}}</a>
+          <div>
+            <a href="{{block.settings.link}}" class="border-solid border-blue-500 bg-gray-300 px-4 py-2 text-slate-700 border-2 rounded-lg {{box_align}}">{{block.settings.button_label}}</a>
+          </div>
         {%- endif -%}
+        </div>
         
       </div>
       </div>
