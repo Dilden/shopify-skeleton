@@ -14,7 +14,7 @@
         }}
       {% endif %}
 
-      <div class="grid grid-cols-3 grid-rows-3 absolute gap-5 m-5 left-0 top-0 w-full h-full">
+      <div class="grid grid-cols-3 grid-rows-3 absolute gap-5 left-0 top-0 w-full h-full">
         <div class="col-span-1 row-span-1"></div>
         <div class="col-span-1 row-span-1"></div>
         <div class="col-span-1 row-span-1"></div>
@@ -24,7 +24,7 @@
         <div class="col-span-1 row-span-1"></div>
         <div class="col-span-1 row-span-1"></div>
         {%- if block.settings.heading -%}
-          <h2 class="bg-gray-200 text-slate-900 p-5 block text-3xl 
+          <h2 class="bg-gray-200 text-slate-900 m-5 block text-3xl 
           {%- liquid
             assign box_align = ""
              case block.settings.box_align

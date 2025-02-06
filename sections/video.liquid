@@ -1,0 +1,51 @@
+{{
+  section.settings.video
+  | video_tag:
+    image_size: '1100x',
+    autoplay: section.settings.autoplay,
+    loop: section.settings.loop,
+    controls: section.settings.controls,
+    muted: section.settings.mute
+}}
+
+{%- schema -%}
+{
+  "name": "Video",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.video.settings.video.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "t:sections.video.settings.enable_video_looping.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "controls",
+      "label": "Show controls",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mute",
+      "label": "Mute video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+  ],
+}
+{%- endschema -%}
