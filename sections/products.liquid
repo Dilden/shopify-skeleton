@@ -1,11 +1,11 @@
-{%- paginate collections by 30 -%}
+{%- paginate collections.products by 30 -%}
   <ul
     class="grid grid-col-1 md:grid-col-2 lg:grid-col-3 grid-flow-row"
     role="list"
   >
-    {%- for collection in collections -%}
+    {%- for product in collection.products -%}
       <li class="">
-        {{collection.image | img_url | image_tag}} 
+        {{product.featured_image | img_url | image_tag}} 
       </li>
     {%- endfor -%}
   </ul>
