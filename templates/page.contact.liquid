@@ -1,0 +1,10 @@
+
+<div class="flex flex-row justify-center">
+    {%- if page.content != blank and page.title != blank} -%}
+      <div class="">
+        <h2>{{ page.title }}</h2>
+        {{ page.content }}
+      </div>
+    {%- endif -%}
+  {%- section 'contact-form' -%}
+</div>
