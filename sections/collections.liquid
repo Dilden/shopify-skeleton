@@ -1,0 +1,12 @@
+{%- paginate collections by 30 -%}
+  <ul
+    class="grid grid-col-1 md:grid-col-2 lg:grid-col-3 grid-flow-row"
+    role="list"
+  >
+    {%- for collection in collections -%}
+      <li class="">
+        {{collection.image | img_url | image_tag}} 
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endpaginate -%}
